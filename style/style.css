@@ -140,3 +140,60 @@ cursor: pointer;
 .button--red:hover {
     background-color:#cd3d3d;
 }
+
+/* Gallery
+================*/
+
+  .chefs-heading-text {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 10px 0px;
+  }
+  
+  .chefs-heading-text span {
+    color: #000;
+    font-weight: 700;
+  }
+
+.image-gallery {
+    /* Mobile first */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-gallery .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .image-gallery {
+      flex-direction: row;
+    }
+  }
+  
+  /* overlay styles */
+  
+  .image-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* hover */
+  .image-item:hover .overlay {
+    transform: scale(1.05);
+    z-index: 1;
+  }
